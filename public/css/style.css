@@ -19,6 +19,19 @@ p#center{
   font-size: 200%;
   text-align:center;
 }
+
+.faq-question-text{
+  margin-bottom:5px;
+  margin-top:40px;
+  cursor:pointer;
+}
+.faq-answer-text{
+  margin-bottom:10px;
+  margin-top:25px;
+  margin-left:35px;
+  font-size: 100%;
+  font-weight: bold;
+}
 .video-wrapper{
   float:left;
   width:30%;
@@ -28,11 +41,21 @@ p#center{
 .video-wrapper iframe{
   display:inline-block;
 }
+@media screen and (max-width: 800px) {
+  .video-wrapper {
+    width:90%;
+    margin:1%;
+  }
+}
 a{
   color:black;
 }
 a:hover{
   color:black;
+}
+.nav>li>a:hover, .nav>li>a:focus {
+    text-decoration: underline;
+    background-color: white;
 }
 img{
   border-radius: 5px;
@@ -42,6 +65,22 @@ img{
   padding-right:100px;
   margin-top: 20px;
   margin-bottom:20px;
+}
+#faq-list{
+    padding-left:250px;
+    padding-right:100px;
+}
+@media screen and (max-width: 800px) {
+  #faq-list {
+    padding-left: 5px;
+    padding-right:5px;
+    width:95%;
+    margin:1%;
+  }
+}
+.active{
+  font-size: 150%;
+  text-decoration: underline;
 }
 .flex_container{
   display:flex;
@@ -62,19 +101,6 @@ img{
 }
 
 
-.search-bar{
-  width:100%;
-  max-width: 500px;
-  margin: 0 auto 25px;
-}
-.form-group{
-  width:100%;
-  max-width: 500px;
-  margin:0 auto 25;
-}
-.btn-success{
-  margin: 0 auto;
-}
 .img-thumbnail{
   display: block;
   border: 0;
@@ -138,35 +164,3 @@ img{
 .fade-in.ng-leave.ng-leave-active {
   opacity: 0;
 }
-
-
-/*.fade-in-out{
-  transition: 0.8s linear all;
-  opacity:1;
-  margin-bottom: 30px;
-  margin-top: 30px;
-}
-
-.fade-in-out.ng-hide {
-  opacity: 0;
-}*/
-
-/*
-
-.box {
-  margin: 50px auto;
-  background: #5FCF80;
-  width: 150px;
-  height: 150px;
-}
-.box:hover {
-  transform: rotate(360deg);
-  background: #9351A6;
-  border-radius: 50%;
-}
-.rotate {
-  transition: all 0.5s ease-in-out;
-}
-.rotate:hover {
-  transition: all 1s ease-in-out;
-}*/

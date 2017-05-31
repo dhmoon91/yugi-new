@@ -12,10 +12,10 @@
             <div class="collapse navbar-collapse" id="nav-collapse">
 
     					<ul class="nav navbar-nav navbar-right">
-        				<li ng-if="!user"><a>안성맞춤유기</a></li>
+        				<li ui-sref-active = "active"><a ui-sref="home" >안성맞춤유기</a></li>
                 <li ng-if="!user"><a>제품소개</a></li>
                 <li ng-if="!user"><a>갤러리</a></li>
-                <li ng-if="!user"><a ui-sref="home.faq">FAQ</a></li>
+                <li ui-sref-active = "active"><a ui-sref="faq">FAQ</a></li>
 
         				<!-- <li ng-if="!user"><a ui-sref="home.signup">Sign up</a></li>
         				<li ng-if="user"><a ng-click="signOut()">Sign Out</a></li> -->

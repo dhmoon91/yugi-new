@@ -1,4 +1,4 @@
-var app = angular.module('movieApp', ['angularUUID2','ngCookies','ngAnimate','ui.router','homeController','navigationController','landing'] );
+var app = angular.module('movieApp', ['angularUUID2','ngCookies','ngAnimate','ui.router','homeController','navigationController','landing','faqController'] );
 
 app.config(function($stateProvider, $urlRouterProvider,$locationProvider){
   $locationProvider.hashPrefix('');
@@ -35,13 +35,20 @@ app.config(function($stateProvider, $urlRouterProvider,$locationProvider){
     }
   })
 
-  .state('home.faq', {
-    url:'faq',
+  .state('faq', {
+    url:'/faq',
     // templateUrl: 'views/home.html',
     views: {
+      'navigation': {
+        templateUrl: 'views/navigation.html',
+        controller: 'NavigationController'
+      },
       '@': {
-        templateUrl: 'views/faq.html'
-        // controller: 'HomeController'
+        templateUrl: 'views/faq.html',
+        controller: 'FaqController'
+      },
+      'footer': {
+        templateUrl: 'views/footer.html'
       }
     }
   })
