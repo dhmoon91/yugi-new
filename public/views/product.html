@@ -1,0 +1,30 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-2" >
+        <p style="border-right:1px solid lightgray ">
+          <i ng-if="!showDinnerset" class="fa fa-square" style="margin-right:10px;" aria-hidden="true"></i>
+          <i ng-if="showDinnerset"class="fa fa-square-o " style="margin-right:10px;"></i>
+          <span ng-click="showDinner()" style="cursor:pointer;">모던 4인조 디너세트</span><br>
+
+          <i ng-if="!showStarterset" class="fa fa-square" style="margin-right:10px;" aria-hidden="true"></i>
+          <i ng-if="showStarterset"class="fa fa-square-o " style="margin-right:10px;"></i>
+            <span ng-click="showStarter()" style="cursor:pointer;">스타터세트</span>
+        </p>
+        <!-- <p>스타터세트</p> -->
+
+      </div>
+      <div class="col-xs-10">
+        <div ng-if="showDinnerset">
+              <img class="center-block"src="../img/dinner-set.jpg" width="80%" alt="">
+        </div>
+        <div ng-if="showStarterset">
+              <img class="center-block"src="../img/starter-set.jpg" width="80%" alt="">
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

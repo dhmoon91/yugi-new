@@ -1,23 +1,80 @@
 @import url(https://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+@font-face{
+  font-family: Hanygo;
+  src:url('../HANYGO230.ttf');
+}
 html,body{
   height: 100%;
   max-height: 100%;
 }
 
-#nav-collapse{
+.navbar .container{
     border-bottom: 1px solid #eee;
-
 }
+.navbar-collapse li {
+  font-family: Hanygo;
+}
+.navbar-toggle.collapsed .icon-bar {
+  background-color:black;
+}
+
+.navbar-toggle{
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.nav li:hover:nth-child(8n+1), .nav li.active:nth-child(8n+1){
+  border-bottom: #C4E17F 3px solid;
+}
+.nav li:hover:nth-child(8n+2), .nav li.active:nth-child(8n+2){
+  border-bottom: #FECF71 3px solid;
+}
+.nav li:hover:nth-child(8n+3), .nav li.active:nth-child(8n+3){
+  border-bottom:  #F0776C 3px solid;
+}
+.nav li:hover:nth-child(8n+4), .nav li.active:nth-child(8n+4){
+  border-bottom: #DB9DBE 3px solid;
+}
+.nav>li>a:hover, .nav>li>a:focus {
+    /*text-decoration: underline;*/
+    background-color: white;
+}
+
 p{
+  font-family: Hanygo;
   margin-top:20px;
 }
 p#center{
   text-align: center;
 }
+p.footer-line{
+  line-height: 0;
+}
+p.footer-line span{
+  margin-right:1%;
+}
+
+.show-small li{
+  margin-bottom: 2px;
+  font-family: Hanygo;
+
+}
+@media screen and (max-width: 850px){
+  .hide-small{
+    display:none;
+  }
+}
+@media screen and (min-width: 850px){
+  .show-small{
+    display:none;
+  }
+
+}
+
 .brush-font{
   font-family: 'Nanum Brush Script',cursive;
   font-size: 200%;
   text-align:center;
+
 }
 
 .faq-question-text{
@@ -32,40 +89,136 @@ p#center{
   font-size: 100%;
   font-weight: bold;
 }
-.video-wrapper{
-  float:left;
-  width:30%;
-  margin:1%;
-  text-align: center;
+
+.img-responsive{
+  display:block;
+  height: 100%;
+  width: 100%;
 }
-.video-wrapper iframe{
-  display:inline-block;
+.slide-main{
+  max-height:380px;
 }
-@media screen and (max-width: 800px) {
-  .video-wrapper {
-    width:90%;
-    margin:1%;
+@media screen and (max-width: 992px){
+  .slide-main{
+    max-height: 300px;
+  }
+
+}
+@media screen and (max-width: 700px){
+  .slide-main{
+    max-height: 150px;
   }
 }
-a{
-  color:black;
-}
-a:hover{
-  color:black;
-}
-.nav>li>a:hover, .nav>li>a:focus {
-    text-decoration: underline;
-    background-color: white;
-}
-img{
-  border-radius: 5px;
-}
+
 #home-info{
   padding-left:100px;
   padding-right:100px;
   margin-top: 20px;
   margin-bottom:20px;
 }
+
+.video-wrapper{
+  float:left;
+  width:30%;
+
+  margin:0 1%;
+  /*text-align: center;*/
+}
+.video-wrapper iframe{
+  display:inline-block;
+  max-width: 240px;
+  max-height:200px;
+}
+.video-wrapper.right{
+  text-align:right;
+  margin-left: 50.2px;
+  padding-left:30px;
+  margin-right: 0px;
+  padding-right:0px;
+}
+.video-wrapper.center{
+  text-align:center;
+  margin-left: 0px;
+  padding-left:0px;
+  margin-right: 0px;
+  padding-right:0px;
+
+}
+.video-wrapper.left{
+  text-align:left;
+  margin-left: 0px;
+  padding-left:0px;
+
+}
+@media screen and (max-width: 1000px) {
+  .video-wrapper iframe{
+    display:inline-block;
+    max-width:100%;
+    max-height:230px;
+  }
+  .video-wrapper.right{
+    text-align:right;
+    margin-left: 20.2px;
+    padding-left:5px;
+    margin-right: 10px;
+    padding-right:5px;
+  }
+  .video-wrapper.center{
+    text-align:center;
+
+    margin-right: 0px;
+    padding-right:15px;
+  }
+  .video-wrapper.left{
+    text-align:left;
+    margin-left: 0px;
+    padding-right:10px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .video-wrapper {
+    width:100%;
+    /*margin:1%;*/
+  }
+  .video-wrapper.right{
+    text-align:center;
+    margin: 5 auto;
+    padding:0 0;
+  }
+  .video-wrapper.center{
+    text-align:center;
+      margin: 5 auto;
+        padding:0 0;
+  }
+  .video-wrapper.left{
+    text-align:center;
+      margin: 5 auto;
+        padding:0 0;
+  }
+  .video-wrapper iframe{
+    display:inline-block;
+    max-width:70%;
+    max-height:200px;
+  }
+  #home-info{
+    padding-left:50px;
+    padding-right:50px;
+
+  }
+}
+
+a{
+  color:black;
+}
+a:hover{
+  color:black;
+}
+
+img{
+  border-radius: 5px;
+}
+
+
 #faq-list{
     padding-left:250px;
     padding-right:100px;
@@ -79,8 +232,7 @@ img{
   }
 }
 .active{
-  font-size: 150%;
-  text-decoration: underline;
+  font-size: 140%;
 }
 .flex_container{
   display:flex;
